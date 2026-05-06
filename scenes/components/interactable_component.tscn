@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://vryy6p3x43um"]
+
+[ext_resource type="Script" uid="uid://caejet4lfwm2v" path="res://scenes/components/interactable_component.gd" id="1_onphe"]
+
+[node name="InteractableComponent" type="Area2D" unique_id=793467982]
+light_mask = 4
+visibility_layer = 2
+script = ExtResource("1_onphe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
