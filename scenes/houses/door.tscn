@@ -55,7 +55,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nno8d")
 }],
-"loop": true,
+"loop": false,
 "name": &"close_door",
 "speed": 5.0
 }, {
@@ -96,6 +96,7 @@ script = ExtResource("1_act2a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1319669752]
 sprite_frames = SubResource("SpriteFrames_nb53x")
+animation = &"open_door"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=46916964]
