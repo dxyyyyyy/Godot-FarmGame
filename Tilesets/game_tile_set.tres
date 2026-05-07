@@ -478,6 +478,7 @@ texture = ExtResource("4_0b0mn")
 8:4/0 = 0
 8:2/size_in_atlas = Vector2i(1, 2)
 8:2/0 = 0
+8:2/0/y_sort_origin = 8
 1:2/0 = 0
 0:2/0 = 0
 0:3/0 = 0
@@ -488,6 +489,8 @@ texture = ExtResource("4_0b0mn")
 1:0/0 = 0
 3:0/size_in_atlas = Vector2i(2, 2)
 3:0/0 = 0
+3:0/0/y_sort_origin = 8
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.5, 8, 3.5, 8, 3.5, 14, -3.5, 14)
 0:0/size_in_atlas = Vector2i(1, 2)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -503,6 +506,7 @@ scenes/5/scene = ExtResource("9_mt8is")
 scenes/6/scene = ExtResource("10_o2x3h")
 
 [resource]
+physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass Terrain"
 terrain_set_0/terrain_0/color = Color(5.896017e-07, 0.46940404, 0.14070717, 1)
