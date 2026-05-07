@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d3n1txyavukak"]
+
+[ext_resource type="Texture2D" uid="uid://ckbq5rgyuorng" path="res://assets/game/objects/basic_grass_biom_things.png" id="1_kglcl"]
+[ext_resource type="Shader" uid="uid://0oqsx5qipdre" path="res://scenes/objects/shake.gdshader" id="1_pt36h"]
+[ext_resource type="PackedScene" uid="uid://7da80hjkhaae" path="res://scenes/components/hurt_component.tscn" id="2_a5wq0"]
+[ext_resource type="Script" uid="uid://djgkycalcox1r" path="res://scenes/objects/trees/large_tree.gd" id="2_pb64x"]
+[ext_resource type="PackedScene" uid="uid://dnvxffiafjaxi" path="res://scenes/components/damage_component.tscn" id="3_pb64x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xsx2"]
+resource_local_to_scene = true
+shader = ExtResource("1_pt36h")
+shader_parameter/shake_indensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mq52c"]
+atlas = ExtResource("1_kglcl")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kglcl"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pt36h"]
+size = Vector2(12, 24)
+
+[node name="LargeTree" type="Sprite2D" unique_id=945935086]
+material = SubResource("ShaderMaterial_8xsx2")
+position = Vector2(0, -13)
+texture = SubResource("AtlasTexture_mq52c")
+script = ExtResource("2_pb64x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1225965290]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=342885237]
+position = Vector2(0, 11)
+shape = SubResource("CircleShape2D_kglcl")
+
+[node name="HurtComponent" parent="." unique_id=201588082 instance=ExtResource("2_a5wq0")]
+tool = 1
+
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=171705782]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_pt36h")
+debug_color = Color(0.9623278, 2.5027991e-06, 0.50800955, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=67096957 instance=ExtResource("3_pb64x")]
+max_damage = 5
