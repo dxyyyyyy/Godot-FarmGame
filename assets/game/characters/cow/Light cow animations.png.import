@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drckkuucy8ve"
-path="res://.godot/imported/free_cow_sprites.png-2e9da94c1797a4305616137e1016a8eb.ctex"
+uid="uid://1j8ljjjrm37l"
+path="res://.godot/imported/Light cow animations.png-e2b82b9596eb18ffc02dfb230b386869.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/characters/free_cow_sprites.png"
-dest_files=["res://.godot/imported/free_cow_sprites.png-2e9da94c1797a4305616137e1016a8eb.ctex"]
+source_file="res://assets/game/characters/cow/Light cow animations.png"
+dest_files=["res://.godot/imported/Light cow animations.png-e2b82b9596eb18ffc02dfb230b386869.ctex"]
 
 [params]
 

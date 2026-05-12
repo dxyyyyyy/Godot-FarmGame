@@ -43,6 +43,7 @@ func _on_physics_process(_delta : float) -> void:
 	
 	var velocity : Vector2 = target_direction * speed
 	if navigation_agent_2d.avoidance_enabled:
+		print("Avoidance Enabled")
 		animated_sprite_2d.flip_h = velocity.x <0
 		navigation_agent_2d.velocity = velocity
 	else:
