@@ -118,7 +118,6 @@ shape = SubResource("CapsuleShape2D_tkqbl")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1387293391]
 navigation_layers = 2
 avoidance_enabled = true
-radius = 5.0
 
 [node name="StateMachine" type="Node" parent="." unique_id=30125531 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("4_qcynk")

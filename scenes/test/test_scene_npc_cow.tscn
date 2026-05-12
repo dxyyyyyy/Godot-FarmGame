@@ -2,13 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://2rmw3f6r4nwg" path="res://Tilesets/game_tile_set.tres" id="1_txxqc"]
 [ext_resource type="PackedScene" uid="uid://wp3mp2wuvx77" path="res://scenes/characters/player/player.tscn" id="2_rep6j"]
-[ext_resource type="PackedScene" uid="uid://bmvp260sajea8" path="res://scenes/characters/chicken/chicken.tscn" id="3_dl3ug"]
 [ext_resource type="PackedScene" uid="uid://l5y1mkqjn7on" path="res://scenes/characters/cow/Cow.tscn" id="4_rep6j"]
-
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_6nbhr"]
-vertices = PackedVector2Array(371.8125, 129.15625, 378.92188, 176.27344, 372.64063, 239.9375, 309.4297, 264.8672, 199.02344, 257.5078, 172.95313, 147.85156, 211.53125, 105.85156, 326.39063, 102.078125)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5, 6, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(162, 145, 191, 267, 311, 275, 382, 247, 389, 176, 381, 123, 329, 92, 207, 96)])
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_txxqc"]
 vertices = PackedVector2Array(346, 110.703125, 363.79688, 165, 355.8125, 231.63281, 278.89063, 258.78125, 167.75, 244.89063, 144.70313, 165.99219, 178.29688, 99.671875, 298.47656, 93.10156)
@@ -45,39 +39,6 @@ y_sort_enabled = true
 position = Vector2(224, 160)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1410072422]
-
-[node name="Chickens" type="Node2D" parent="." unique_id=1625565678]
-
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Chickens" unique_id=1342259465]
-position = Vector2(-21, -9)
-navigation_polygon = SubResource("NavigationPolygon_6nbhr")
-
-[node name="Chicken" parent="Chickens" unique_id=1115624055 instance=ExtResource("3_dl3ug")]
-position = Vector2(192, 128)
-
-[node name="Chicken2" parent="Chickens" unique_id=889951226 instance=ExtResource("3_dl3ug")]
-position = Vector2(256, 128)
-
-[node name="Chicken3" parent="Chickens" unique_id=641010600 instance=ExtResource("3_dl3ug")]
-position = Vector2(320, 128)
-
-[node name="Chicken4" parent="Chickens" unique_id=451919599 instance=ExtResource("3_dl3ug")]
-position = Vector2(192, 192)
-
-[node name="Chicken5" parent="Chickens" unique_id=1095230732 instance=ExtResource("3_dl3ug")]
-position = Vector2(256, 192)
-
-[node name="Chicken6" parent="Chickens" unique_id=880505781 instance=ExtResource("3_dl3ug")]
-position = Vector2(320, 192)
-
-[node name="Chicken7" parent="Chickens" unique_id=2137069054 instance=ExtResource("3_dl3ug")]
-position = Vector2(192, 240)
-
-[node name="Chicken8" parent="Chickens" unique_id=623835132 instance=ExtResource("3_dl3ug")]
-position = Vector2(256, 240)
-
-[node name="Chicken9" parent="Chickens" unique_id=982307167 instance=ExtResource("3_dl3ug")]
-position = Vector2(320, 232)
 
 [node name="Cows" type="Node2D" parent="." unique_id=623784442]
 
