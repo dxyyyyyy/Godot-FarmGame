@@ -102,6 +102,7 @@ radius = 5.999997
 height = 13.999285
 
 [node name="Cow" type="CharacterBody2D" unique_id=2019764886]
+collision_layer = 64
 script = ExtResource("1_tkqbl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=159746339]
@@ -118,6 +119,7 @@ shape = SubResource("CapsuleShape2D_tkqbl")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1387293391]
 navigation_layers = 2
 avoidance_enabled = true
+debug_enabled = true
 
 [node name="StateMachine" type="Node" parent="." unique_id=30125531 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("4_qcynk")

@@ -14,6 +14,10 @@ config/name="FarmGame"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ToolManager="*uid://curxf27shphj2"
+
 [display]
 
 window/size/viewport_width=640
@@ -37,6 +41,10 @@ folder_colors={
 "res://scenes/": "green",
 "res://scripts/": "pink"
 }
+
+[global_group]
+
+navigation_polygon_source_geometry_group=""
 
 [input]
 
@@ -83,6 +91,7 @@ hit={
 2d_physics/layer_4="Tool"
 2d_physics/layer_5="Object"
 2d_physics/layer_6="Collectable"
+2d_physics/layer_7="NPC"
 
 [physics]
 

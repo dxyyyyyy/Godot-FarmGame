@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsreqyg408ufu"
-path="res://.godot/imported/fences.png-dd7b569a0a2f012ceff3d5ef840c1fb9.ctex"
+uid="uid://dbjwb0for50p8"
+path="res://.godot/imported/Fences.png-e7783957cbe641eab2949193da61230d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game/tilesets/fences.png"
-dest_files=["res://.godot/imported/fences.png-dd7b569a0a2f012ceff3d5ef840c1fb9.ctex"]
+source_file="res://assets/game/Fences.png"
+dest_files=["res://.godot/imported/Fences.png-e7783957cbe641eab2949193da61230d.ctex"]
 
 [params]
 

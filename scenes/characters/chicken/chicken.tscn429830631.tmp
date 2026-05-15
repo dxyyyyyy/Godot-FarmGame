@@ -99,5 +99,3 @@ script = ExtResource("4_31inw")
 character = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 navigation_agent_2d = NodePath("../../NavigationAgent2D")
-min_speed = null
-max_speed = null
