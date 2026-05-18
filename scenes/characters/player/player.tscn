@@ -403,7 +403,6 @@ radius = 3.0
 [node name="Player" type="CharacterBody2D" unique_id=924282780]
 collision_layer = 2
 script = ExtResource("1_6avc5")
-current_tool = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1728418232]
 position = Vector2(0, -8)
@@ -446,7 +445,6 @@ player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 
 [node name="HitComponent" parent="." unique_id=1985011224 instance=ExtResource("10_3xnwo")]
-current_tool = 1
 
 [node name="HitComponentCollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=298111542]
 shape = SubResource("CircleShape2D_djydg")

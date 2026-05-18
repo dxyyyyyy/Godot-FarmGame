@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://dp5b16h7acg3u" path="res://scenes/ui/game_ui_theme.tres" id="1_0gsfs"]
 [ext_resource type="Script" uid="uid://cilseibs2qew0" path="res://scenes/ui/tool_panel.gd" id="2_g8g1o"]
 [ext_resource type="Texture2D" uid="uid://eht1m8k7ja6o" path="res://assets/game/objects/basic_tools_and_meterials.png" id="2_xtjp6"]
+[ext_resource type="ButtonGroup" uid="uid://cmh35ygtqebb5" path="res://tool_button_group.tres" id="3_flnh2"]
 [ext_resource type="Texture2D" uid="uid://rat5j70dfy4y" path="res://assets/game/objects/basic_plants.png" id="3_jerid"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jerid"]
@@ -40,6 +41,7 @@ offset_bottom = 27.0
 theme = ExtResource("1_0gsfs")
 theme_type_variation = &"DarkWoodPanel"
 script = ExtResource("2_g8g1o")
+button_group = ExtResource("3_flnh2")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=798272237]
 layout_mode = 2
@@ -54,39 +56,61 @@ layout_mode = 2
 [node name="ToolAxe" type="Button" parent="MarginContainer/HBoxContainer" unique_id=319133716]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 2
 theme_type_variation = &"ToolButton"
 toggle_mode = true
+keep_pressed_outside = true
+button_group = ExtResource("3_flnh2")
 icon = SubResource("AtlasTexture_jerid")
 icon_alignment = 1
 
 [node name="ToolTilling" type="Button" parent="MarginContainer/HBoxContainer" unique_id=2020901745]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 2
 theme_type_variation = &"ToolButton"
 toggle_mode = true
+button_group = ExtResource("3_flnh2")
 icon = SubResource("AtlasTexture_flnh2")
 icon_alignment = 1
 
 [node name="ToolWateringCan" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1376453314]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 2
 theme_type_variation = &"ToolButton"
 toggle_mode = true
+button_group = ExtResource("3_flnh2")
 icon = SubResource("AtlasTexture_lt3pv")
 icon_alignment = 1
 
 [node name="ToolCorn" type="Button" parent="MarginContainer/HBoxContainer" unique_id=962141480]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 2
 theme_type_variation = &"ToolButton"
 toggle_mode = true
+button_group = ExtResource("3_flnh2")
 icon = SubResource("AtlasTexture_5kuai")
 icon_alignment = 1
 
 [node name="ToolTomato" type="Button" parent="MarginContainer/HBoxContainer" unique_id=1807286558]
 custom_minimum_size = Vector2(26, 26)
 layout_mode = 2
+focus_mode = 0
+focus_behavior_recursive = 2
 theme_type_variation = &"ToolButton"
 toggle_mode = true
+button_group = ExtResource("3_flnh2")
 icon = SubResource("AtlasTexture_7xaca")
 icon_alignment = 1
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolAxe" to="." method="_on_tool_axe_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTilling" to="." method="_on_tool_tilling_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolWateringCan" to="." method="_on_tool_watering_can_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolCorn" to="." method="_on_tool_corn_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ToolTomato" to="." method="_on_tool_tomato_pressed"]
