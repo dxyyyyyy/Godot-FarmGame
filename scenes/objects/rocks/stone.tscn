@@ -8,7 +8,7 @@ atlas = ExtResource("1_kind3")
 region = Rect2(114, 18, 10, 8)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s5rqd"]
-radius = 3.0
+radius = 4.0
 
 [node name="stone" type="Sprite2D" unique_id=740435527]
 position = Vector2(0, -2)
@@ -18,5 +18,5 @@ texture = SubResource("AtlasTexture_e2a05")
 collectable_name = "stone"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent" unique_id=553168029]
-position = Vector2(0, 1)
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_s5rqd")
