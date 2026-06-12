@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://baeicujxsm1gj"]
+
+[ext_resource type="Script" uid="uid://bet571yi7eqyg" path="res://scenes/objects/plants/corn.gd" id="1_hgaca"]
+[ext_resource type="PackedScene" uid="uid://7da80hjkhaae" path="res://scenes/components/hurt_component.tscn" id="2_aphyd"]
+[ext_resource type="PackedScene" uid="uid://bedpeywo6awnc" path="res://scenes/objects/plants/watering_particles.tscn" id="2_ofjf8"]
+[ext_resource type="PackedScene" uid="uid://vfp0ba15hamw" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_5ucl7"]
+[ext_resource type="PackedScene" uid="uid://cyg6gy868jkq5" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="5_q3ekf"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5ucl7"]
+load_path = "res://.godot/imported/basic_plants.png-95b9b15040aa30969080ee5e6985e7ef.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ucl7"]
+size = Vector2(13, 8)
+
+[node name="Corn" type="Node2D" unique_id=769494337]
+y_sort_enabled = true
+script = ExtResource("1_hgaca")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1510000919]
+position = Vector2(0, -6)
+texture = SubResource("CompressedTexture2D_5ucl7")
+hframes = 6
+vframes = 2
+frame = 1
+
+[node name="WateringParticles" parent="." unique_id=1059450707 instance=ExtResource("2_ofjf8")]
+
+[node name="FloweringParticles" parent="." unique_id=1613064300 instance=ExtResource("3_5ucl7")]
+
+[node name="GrowthCycleComponent" parent="." unique_id=2005702386 instance=ExtResource("5_q3ekf")]
+
+[node name="HurtComponent" parent="." unique_id=201588082 instance=ExtResource("2_aphyd")]
+position = Vector2(0, -6)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent" unique_id=954637694]
+position = Vector2(-0.5, 3)
+shape = SubResource("RectangleShape2D_5ucl7")
